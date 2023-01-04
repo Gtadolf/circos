@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  circos:
+    container_name: circos
+    image: alexcoppe/circos
+    command: '--conf /data/etc/circos.conf --outputdir /data/output'
+    ports:
+      - '4040:4040'
+      - '18080:18080' 
+      - '8998:8998' 
+      - '8888:8888' 
+    #restart: always
+    volumes:
+      - C:\work-2023\1-circos\work:/data #Data
